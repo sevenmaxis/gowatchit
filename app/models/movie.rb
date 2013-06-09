@@ -7,7 +7,7 @@ class Movie
 
   def self.search(query)
     TmdbMovie.find(:title => query, :expand_results => false).map do |movie|
-      movie.keep_fields(@@attributes).to_hash
+      movie.keep_fields(*@@attributes).to_hash
     end
   end
 
