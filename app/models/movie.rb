@@ -1,5 +1,6 @@
 require 'parallel'
 require Rails.root.join("lib/patched_open_struct")
+require Rails.root.join("lib/google_play")
 
 class Movie
 
@@ -17,9 +18,9 @@ class Movie
       lambda { GooglePlay.search("#{title} (#{year})") }
     ]) { |l| l.call }
 
-    movie.keep_fields(@@attributes).to_hash.tap do |hash|
+    movie.keep_fields(*@@attributes).to_hash.tap do |hash|
       hash[:href]  = item[:href]
-      hash[:price] = item[:first]
+      hash[:price] = item[:price]
     end
   end
 end
