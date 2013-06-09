@@ -1,0 +1,22 @@
+%li{:class => "unstyled"}
+  %hr
+  .row
+    .span8
+      .row
+        .span8
+          %h4
+            %strong= movie[:original_name]
+            %span{:title => "release year"}= movie[:released][0,4]
+      .row
+        .span2
+          = image_tag( movie[:posters][0].url, :alt => movie[:original_name] )
+        .span6
+          %strong Rating:
+          = movie[:rating]
+          %br
+          %strong Description:
+          = movie[:overview]
+          %br
+          %br
+          %span
+            = link_to 'Show', url_for( :action => :show, :id => movie[:imdb_id], :title => movie[:original_name], :year => movie[:released][0,4]), :class => 'btn'
