@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem "parallel"
 gem "ruby-tmdb"
 gem "nokogiri"
+gem 'haml-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -19,6 +20,8 @@ group :test do
   gem 'rspec-rails'
   gem 'vcr'
   gem 'webmock'
+  gem 'cucumber-rails', :require => false
+  gem "capybara-webkit"
 end
 
 group :test, :development do
