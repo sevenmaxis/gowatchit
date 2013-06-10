@@ -11,7 +11,7 @@ describe "Movies requests" do
   end
 
   it "" do
-    fill_in 'input[name="search"]', :with => "The Great Gatsby"
+    fill_in 'input[name="query"]', :with => "The Great Gatsby"
     click_on "Search"
     page.should have_content("The Great Gatsby")
   end

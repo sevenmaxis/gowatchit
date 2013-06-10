@@ -1,22 +1,24 @@
-.row
-  .span8
-    .row
-      .span8
-        %h4
-          %strong= @movie[:original_name]
-    .row
-      .span3
-        = image_tag( @movie[:posters][1].url, :alt => @movie[:original_name] )
-      .span5
-        %strong Release year:
-        = @movie[:released][0,4]
-        %br
-        %strong Description:
-        = @movie[:overview]
-        %hr        
-        %h5 Google Play Store:
-        = image_tag @movie[:href]
-        %strong Price:
-        = @movie[:price]
-        %hr
-        = link_to "Back", :back, :class => 'btn'
+#content
+  
+  %h3= 'GoWatchIt'
+  
+  .row
+    .span8
+      .row
+        .span8
+          %h4
+            %strong= @movie[:original_name]
+      .row
+        .span3
+          = image_tag( @movie[:posters][1].url, :alt => @movie[:original_name] )
+        .span5
+          %strong Release year:
+          = @movie[:released][0,4]
+          %br
+          %strong Description:
+          = @movie[:overview]
+          %hr        
+          %h5 Google Play Store:
+          = button_to(@movie[:price], @movie[:href], :class => 'btn btn-large btn-primary')
+          %hr
+          = link_to "Back", :back, :class => 'btn btn-inverse'
