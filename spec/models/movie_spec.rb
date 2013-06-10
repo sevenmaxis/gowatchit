@@ -21,7 +21,7 @@ describe Movie do
       
       movie[:original_name].should == "The Great Gatsby"
       movie[:released].should == "1974-03-27"
-      movie[:href].should == "/store/movies/details/The_Great_Gatsby_1974?id=P5GQTdU1358&feature=search_result"
+      movie[:href].should include "/store/movies/details/The_Great_Gatsby_1974?id=P5GQTdU1358&feature=search_result"
       movie[:price].should == "From $2.99"
     end
   end

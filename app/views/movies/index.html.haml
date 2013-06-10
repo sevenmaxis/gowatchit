@@ -6,7 +6,7 @@
 
   %h3= 'GoWatchIt'
   
-  = form_for 'search', method: :get, url: {action: :index}, html: {:class => 'search-form', size: 50} do |f|
+  = form_for 'Search', method: :get, url: {action: :index}, html: {:class => 'search-form', size: 50} do |f|
     = f.text_field :query, :class => 'search-query', value: @query, name: :query
     = f.submit :search, :class => 'btn btn-primary'
 
