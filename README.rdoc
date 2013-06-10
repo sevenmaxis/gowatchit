@@ -1,6 +1,6 @@
 == GoWatchIt
 
-A toy application to play with <tt>http://www.themoviedb.org/</tt> and <tt>Google Play Movie</tt>
+A toy application to play with <tt>http://www.themoviedb.org</tt> and <tt>Google Play Movie</tt>
 
 === Notice
 

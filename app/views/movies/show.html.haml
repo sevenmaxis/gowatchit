@@ -17,8 +17,13 @@
           %br
           %strong Description:
           = @movie[:overview]
-          %hr        
+          %hr
           %h5 Google Play Store:
-          = button_to(@movie[:price], @movie[:href], :class => 'btn btn-large btn-primary')
+          - if @movie[:href]
+            = button_to(@movie[:price], @movie[:href], :class => 'btn btn-large btn-primary')
+          - else
+            %h6= 'No information available'
+
+
           %hr
           = link_to "Back", :back, :class => 'btn btn-inverse'

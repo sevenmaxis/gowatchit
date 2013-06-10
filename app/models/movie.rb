@@ -19,8 +19,9 @@ class Movie
     ]) { |l| l.call }
 
     movie.keep_fields(*@@attributes).to_hash.tap do |hash|
-      hash[:href]  = "https://play.google.com" + item[:href]
+      hash[:href]  = "https://play.google.com" + item[:href] if item[:href]
       hash[:price] = item[:price]
     end
   end
 end
+

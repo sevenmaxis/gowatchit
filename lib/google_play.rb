@@ -23,8 +23,8 @@ class GooglePlay
       options = {:proxy => proxy, :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE}
       doc = Nokogiri::HTML(open(url(query), options))
       
-      { :href => doc.css(".results-section .title").first[:href],
-        :price => doc.css("span.buy-button-price").first.content }
+      { :href => (doc.css(".results-section .title").first[:href] rescue nil),
+        :price => (doc.css("span.buy-button-price").first.content  rescue nil)}
     end
   end
 end
