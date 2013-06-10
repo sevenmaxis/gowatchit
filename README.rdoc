@@ -15,5 +15,5 @@ in Ukraine region. So some links can be not fully functional.
   rails s
   got to http://localhost:3000/
 
-== Application is hosted on Heroku:
-[http://salty-fjord-8376.herokuapp.com/](http://salty-fjord-8376.herokuapp.com/)
+=== Application is hosted on Heroku:
+[http://salty-fjord-8376.herokuapp.com/]
